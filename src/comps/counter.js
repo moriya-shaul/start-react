@@ -6,7 +6,7 @@ export default class Counter extends Component {
   //   background:"yellow",
   //   padding:"16px"
   // }
-
+  // הערה
   // counter = 44;
   // כל משתנה ריאקטיבי , אצור אותו בתוך סטייט
   // שבנוי בתוך הריאקט כבר

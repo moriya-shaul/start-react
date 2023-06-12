@@ -2,7 +2,7 @@ import React, { Component } from "react";
 export default class Gallery extends Component {
   state = { counter: 0 };
   colors_ar = ["red", "blue", "green", "brown"];
-  //   img_ar = ["/img_058.jpg", "/img_079.jpg", "/img_302.jpg", "/img_706.jpg"];
+  img_ar = ["cake1", "cake2", "cake3", "cake4"];
   back = () => {
     if (this.state.counter - 1 < 0) {
       this.setState({ counter: 3 });
@@ -18,11 +18,13 @@ export default class Gallery extends Component {
     }
   };
   render() {
+    return(
     <div>
-      <div style={{ color: this.colors_ar[this.state.counter] }}></div>
         {/* <div>{this.img_ar[this.state.counter]}</div> */}
         <button onClick={this.back}>BACK</button>
-        <button onClick={this.next}>NEXT</button>
-    </div>;
+        <img src={"/images/"+this.img_ar[this.state.counter]+".jpg"} width={"200px"}/>
+        <button  onClick={this.next}>NEXT</button>
+    </div>)
+    
   }
 }

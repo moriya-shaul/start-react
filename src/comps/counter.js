@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class Counter extends Component {
 
-  // divStyle = {
+  // divStyle = {g
   //   background:"yellow",
   //   padding:"16px"
   // }

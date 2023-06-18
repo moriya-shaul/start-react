@@ -1,19 +1,31 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
-function AppApi() {
+export default  function AppApi() {
+  let [ar,setAr] = useState([]);
+
     useEffect(()=>{
         doApi();
     },[]);
+
     const doApi = async()=>{
         let url = "http://fs1.co.il/bus/shop.php";
         let resp = await fetch(url);
         let data = await resp.json();
-        console.log(data);
-        
+        console.log(data);  
+        setAr(data);
     }
   return (
-    <div>AppApi</div>
+    <div>
+      <h1>list:</h1>
+      <ul>
+        {ar.map(item=>{
+          return(
+            <li key={item.id}>
+               {item.mame} - {item.price}
+            </li>
+          )
+        })}
+      </ul>
+    </div>
   )
 }
-
-export default AppApi

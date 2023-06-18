@@ -20,9 +20,10 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import MyForm from './comps_form/my_form';
 // import AppHw from './comps_hw/appHw'; 
 // import AppDate from './ofer1/appDate';
-import AppApi from './comps_api/appApi';
+// import AppApi from './comps_api/appApi';
 // import AppRoutes from './comps_routes/appRoutes';
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
       {/* <AppRoutes /> */}
       {/* <AppHw /> */}
       {/* <AppDate/> */}
-      <AppApi/>
+      {/* <AppApi/> */}
+      <MyForm/>
     </React.Fragment>
   );
 }

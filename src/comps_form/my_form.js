@@ -40,7 +40,7 @@ export default function MyForm() {
         <label>Email:</label>
         {/* ריגולר מקבל ריגולר אקספריישן במקרה הנל בודק <- pattern*  
  שמייל תקין */}
-        <input {...emailRef} type="text" className="form-control" />
+        <input {...register("email",{required:true, })} type="text" className="form-control" />
         {errors.email && <span className="text-danger">Enter valid email</span>}
         <button className="btn btn-info mt-3">Order</button>
       </form>
